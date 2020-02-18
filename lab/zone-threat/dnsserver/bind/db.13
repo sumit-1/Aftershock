@@ -1,0 +1,16 @@
+;
+; BIND reverse data file for 13.x network
+;
+$TTL	604800
+@	IN	SOA	localhost. root.localhost. (
+			      2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	dns.
+53	IN	PTR	dns.threat.net.
+1	IN	PTR	router.threat.net.
+5	IN	PTR	shock.com.
+123	IN	PTR	ntp.threat.net.

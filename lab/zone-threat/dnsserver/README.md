@@ -19,14 +19,14 @@ Purpose: To provide DNS Server in the environment.
 - Edit /etc/bind/db.threat.net to add a host in threat domain.  
 
 ### Logging Queries
-- Include the following in /etc/bind/named.conf.local
-    logging {
-        channel query.log {
-            file "/var/log/query.log";
-            severity debug 3;
-        };
-        category queries { query.log; };
-    };
+- Include the following in /etc/bind/named.conf.local  
+    logging {  
+        channel query.log {  
+            file "/var/log/query.log";  
+            severity debug 3;  
+        };  
+        category queries { query.log; };  
+    };  
 
 - Execute the following
     > sudo touch /var/log/query.log

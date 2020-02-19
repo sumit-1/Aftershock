@@ -20,20 +20,22 @@ Purpose: To provide DNS Server in the environment.
 
 ### Logging Queries
 - Include the following in /etc/bind/named.conf.local  
-    logging {  
+
+      logging {  
         channel query.log {  
             file "/var/log/query.log";  
             severity debug 3;  
         };  
         category queries { query.log; };  
-    };  
+      };  
 
 - Execute the following
     > sudo touch /var/log/query.log
     > sudo chown bind /var/log/query.log
 
-- In file /etc/apparmor.d/usr.sbin.named, add the following line
-    /var/log/query.log w,
+- In file /etc/apparmor.d/usr.sbin.named, add the following line  
+
+      /var/log/query.log w,
 
 - Reload all
     > cat /etc/apparmor.d/usr.sbin.named | sudo apparmor_parser -r

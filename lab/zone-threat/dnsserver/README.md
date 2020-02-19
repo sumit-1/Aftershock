@@ -29,17 +29,17 @@ Purpose: To provide DNS Server in the environment.
         category queries { query.log; };  
       };  
 
-- Execute the following
-    > sudo touch /var/log/query.log
-    > sudo chown bind /var/log/query.log
+- Execute the following  
+    > sudo touch /var/log/query.log  
+    > sudo chown bind /var/log/query.log  
 
 - In file /etc/apparmor.d/usr.sbin.named, add the following line  
 
-      /var/log/query.log w,
+      /var/log/query.log w,  
 
 - Reload all
-    > cat /etc/apparmor.d/usr.sbin.named | sudo apparmor_parser -r
-    > sudo systemctl restart bind9.service
+    > cat /etc/apparmor.d/usr.sbin.named | sudo apparmor_parser -r  
+    > sudo systemctl restart bind9.service  
 
 [source: https://help.ubuntu.com/lts/serverguide/dns-troubleshooting.html#dns-logging]
 

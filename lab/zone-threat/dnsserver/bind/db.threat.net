@@ -1,9 +1,9 @@
 ;
-; BIND data file for threat network
+; BIND data file for local loopback interface
 ;
 $TTL	604800
 @	IN	SOA	threat. root.threat.net. (
-			      2		; Serial
+			      3		; Serial
 			 604800		; Refresh
 			  86400		; Retry
 			2419200		; Expire
@@ -11,8 +11,10 @@ $TTL	604800
 	IN	A	13.13.13.1
 ;
 @	IN	NS	dns.threat.net.
+@	IN	MX	10  mail.threat.net.
 @	IN	A	13.13.13.10
 @	IN	AAAA	::1
 dns	IN	A	13.13.13.53
 router	IN	A	13.13.13.1
 ntp	IN	A	13.13.13.123
+mail	IN	A	13.13.13.25

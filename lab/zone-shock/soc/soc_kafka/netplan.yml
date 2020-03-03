@@ -1,0 +1,12 @@
+# This file describes the network interfaces available on your system
+# For more information, see netplan(5).
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3:
+      addresses: [10.200.1.92/24]
+      gateway4: 10.200.1.1
+      nameservers:
+              addresses: [10.100.1.10]
+      dhcp4: no

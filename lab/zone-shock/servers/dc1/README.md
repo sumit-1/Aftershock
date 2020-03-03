@@ -10,7 +10,7 @@ Purpose: To provide Domain in Shock Zone.
 | RAM | 2048 MB  |
 | IP | 10.100.1.10/24 |
 | Hostname | DC1.shock.com |
-| Zone | SOC-Server |
+| Zone | Servers-Shock |
 
 
 
